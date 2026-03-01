@@ -2,7 +2,7 @@
 
 # Módulo de Consulta de Eventos
 
-- RF1 - Visualización de Cartelera: El sistema debe listar los eventos actuales y futuros, limitando la     visualización inicial a 10 elementos por página.
+- RF1 - Visualización de Cartelera: El sistema debe listar los eventos actuales y futuros, limitando la visualización inicial a 10 elementos por página.
 - RF2 - Filtros de Búsqueda: El usuario podrá filtrar los eventos mediante búsqueda por nombre (texto libre) y por rango de fechas.
 - RF3 - Detalle del Evento: Al seleccionar un evento, el sistema debe desplegar:
         Información general: Descripción, fecha, hora, plataforma/lugar, encargado y contacto.
@@ -12,11 +12,11 @@
 
 # Módulo de Inscripción (Proceso en dos pasos)
 
-- RF5 - Inscripción - Paso 1 (Datos Personales y Ubicación): El formulario debe capturar nombre, identificación (tipo y número), dirección completa (provincia, cantón, distrito, señas), contacto, profesión, entidad, tipo de deficiencia y necesidad de transporte.
+- RF5 - Inscripción - Paso 1 (Datos Personales y Ubicación): El formulario debe capturar nombre, identificación (tipo y número), dirección completa (provincia, cantón, distrito, señas), contacto, profesión, entidad, tipo de deficiencia (fisica, visual y auditiva) y necesidad de transporte.
 - RF6 - Inscripción - Paso 2 (Logística y Accesibilidad): El sistema debe capturar:
         Costos estimados (transporte/hospedaje) y requerimiento de hospedaje.
         Información de salud (alergias a alimentos/medicamentos).
-- RF7 - Carga de Archivos: El sistema debe permitir adjuntar imágenes y videos (máximo 10 MB por archivo) incluyendo obligatoriamente una descripción textual de las imágenes (para accesibilidad).
+- RF7 - Carga de Archivos: El sistema debe permitir adjuntar imágenes(máximo 10 MB por archivo) incluyendo obligatoriamente una descripción textual de las imágenes (para accesibilidad) y admitirse en formatos png y jpg.
 - RF8 - Suscripción y Notificaciones: El usuario podrá autorizar mediante un checkbox el envío de notificaciones sobre el evento vía correo electrónico y teléfono.
 - RF9 - Confirmación de Registro: Tras completar el proceso, el sistema debe mostrar un mensaje de éxito ("Inscripción enviada").
 
@@ -41,5 +41,5 @@
 
 # Módulo de Usuarios y Difusión
 
-- RF15 - Gestión de Difusión: El editor podrá crear y administrar listas de difusión para el envío masivo de información a los suscriptores.
+- RF15 - Gestión de Difusión: El editor podrá crear y el administrador debera aprobar las listas de difusión para el envío masivo de información a los suscriptores.
 - RF16 - Gestión de Suscriptores: El sistema debe permitir listar y consultar la base de datos de usuarios suscritos para seguimiento.

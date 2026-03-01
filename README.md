@@ -4,7 +4,7 @@
 
 - Principalmente se utilizara camelCase
 - Los nombres de los archivos se utilizaran snake_case
-- Accesibilidad: Es obligatorio que todo nuevo componente visual incluya etiquetas aria-label, atributos alt descriptivos y que sea navegable mediante el teclado (Tabindex)
+- Accesibilidad: Es obligatorio que todo nuevo componente visual incluya etiquetas aria-label, atributos alt descriptivos.
 
 # Estrategia de branches y commits.
 
