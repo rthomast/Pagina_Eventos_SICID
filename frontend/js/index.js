@@ -1,3 +1,4 @@
+// Filtro de busqueda
 function llenarSelect(select, inicio, fin) {
     for (let i = inicio; i <= fin; i++) {
         let option = document.createElement("option");
@@ -30,7 +31,7 @@ llenarSelect(desdeDia, 1, 31);
 llenarSelect(hastaDia, 1, 31);
 
 // Evento submit
-document.getElementById("filtroEventos").addEventListener("submit", function(e) {
+document.getElementById("filtroEventos").addEventListener("submit", function (e) {
     e.preventDefault();
 
     const datos = {
@@ -40,4 +41,32 @@ document.getElementById("filtroEventos").addEventListener("submit", function(e) 
     };
 
     console.log("Filtro aplicado:", datos);
+});
+
+
+// Sweet Alert
+const form = document.getElementById("formInscripcion");
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+    }
+
+    Swal.fire({
+        
+        title: "Inscripción Enviada",
+        html: "<strong>Se envió la solicitud de inscripción con éxito.</strong> Los encargados de administrar NOTICIAS se estarán comunicando con usted, por medio del correo electrónico para notificar la aprobación de su inscripción al módulo.",
+        icon: "success",
+        confirmButtonText: "Continuar"
+
+    }).then(() => {
+        form.reset();
+
+        const modal = bootstrap.Modal.getInstance(document.getElementById('modalInscripcion'));
+        modal.hide();
+
+    });
 });
