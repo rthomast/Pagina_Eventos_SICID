@@ -15,6 +15,8 @@
     <!-- Estilos propios -->
     <link rel="stylesheet" href="css/index.css">
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <title>Eventos SICID</title>
 
 </head>
@@ -91,7 +93,7 @@
             <div class="col-12 barraNav ">
                 <ul class="nav nav-tabs d-flex flex-wrap justify-content-around align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="">Inicio</a>
+                        <a class="nav-link" href="./index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="">SICID</a>
@@ -129,7 +131,7 @@
         </nav>
     </header>
 
-    <!-- Contenido principal -->
+
     <main class="flex-grow-1">
 
         <!-- Titulo -->
@@ -161,28 +163,175 @@
         </div>
 
         <!-- Buscador -->
-        <form id="filtroForm">
-            <label for="fechaDesde">Desde:</label>
-            <input type="date" id="fechaDesde" name="fechaDesde">
+        <form id="filtroEventos">
+            <div class="container my-4 p-4 bg-light rounded">
+                <div class="row align-items-center g-3">
 
-            <label for="fechaHasta">Hasta:</label>
-            <input type="date" id="fechaHasta" name="fechaHasta">
+                    <div class="col-12 col-md-4">
+                        <label class="form-label fw-bold">Ingrese el nombre del evento que desea buscar</label>
+                        <div class="input-group">
+                            <button class="btn btn-dark" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <input type="text" id="busqueda" class="form-control" placeholder="Buscar">
+                        </div>
+                    </div>
 
-            <button type="submit">Filtrar</button>
+                    <!-- Desde -->
+                    <div class="col-12 col-md-4">
+                        <label class="fw-bold">Desde</label>
+                        <div class="d-flex gap-2">
+                            <select id="desdeAnio" class="form-select"></select>
+                            <select id="desdeMes" class="form-select"></select>
+                            <select id="desdeDia" class="form-select"></select>
+                        </div>
+                    </div>
+
+                    <!-- Hasta -->
+                    <div class="col-12 col-md-4">
+                        <label class="fw-bold">Hasta</label>
+                        <div class="d-flex gap-2">
+                            <select id="hastaAnio" class="form-select"></select>
+                            <select id="hastaMes" class="form-select"></select>
+                            <select id="hastaDia" class="form-select"></select>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </form>
+
+        <div class="container">
+            <div class="row">
+
+                <img class="imgUC" src="./images/Under-Construction-Sign.png" alt="">
+
+            </div>
+
+            <div class="insc-st">
+                <div class="bar">
+                    <div class="p-5">
+                        <h2>Inscripción a Eventos PONADIS</h2>
+                        <p> Con el fin de mantenerse actualizado en las últimos eventos del Sistema
+                            Costarricense de Información sobre Discapacidad - SICID - puede inscribirse a la
+                            notificación por correo electrónico sobre los eventos más recientes de la Política Nacional
+                            de Discapacidad - PONADIS -</p>
+                        <button class="btn btnIns" data-bs-toggle="modal" data-bs-target="#modalInscripcion">
+                            <strong>Inscribirme</strong>
+                        </button>
+
+                        <!-- Formulario modal -->
+                        <div class="modal fade" id="modalInscripcion" tabindex="-1">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content p-4">
+
+                                    <!-- Título -->
+                                    <div class="text-center mb-3">
+                                        <h3 class="titulo-modal">Inscripción a Eventos</h3>
+                                    </div>
+
+                                    <!-- Descripción -->
+                                    <p class="text-center descripcion-modal">
+                                        Complete los datos solicitados para inscribirse a recibir notificaciones de los
+                                        eventos más recientes del Sistema Costarricense de Información sobre
+                                        Discapacidad -SICID-. Se le enviará un correo electrónico a su cuenta cuando
+                                        existan nuevas noticias publicadas en el sitio.
+                                    </p>
+
+                                    <!-- Formulario -->
+                                    <form id="formInscripcion">
+
+                                        <!-- Campos -->
+                                        <div class="row mb-3 align-items-center">
+                                            <div class="col-md-4">
+                                                <label class="form-label">*Nombre Completo</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control"
+                                                    placeholder="Introduzca el dato solicitado" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3 align-items-center">
+                                            <div class="col-md-4">
+                                                <label class="form-label">*Correo Electrónico</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="email" class="form-control"
+                                                    placeholder="Introduzca el dato solicitado" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3 align-items-center">
+                                            <div class="col-md-4">
+                                                <label class="form-label">*Profesión u Oficio</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control"
+                                                    placeholder="Introduzca el dato solicitado" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3 align-items-center">
+                                            <div class="col-md-4">
+                                                <label class="form-label">*Entidad para la que trabaja o está
+                                                    vinculado</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control"
+                                                    placeholder="Introduzca el dato solicitado" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-3 align-items-center">
+                                            <div class="col-md-4">
+                                                <label class="form-label">*Razón por la que desea ser notificado</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control"
+                                                    placeholder="Introduzca el dato solicitado" required>
+                                            </div>
+                                        </div>
+
+                                        <!-- Checkbox -->
+                                        <div class="text-center my-4">
+                                            <div class="form-check d-inline-flex align-items-center">
+                                                <input class="form-check-input me-2" type="checkbox" required>
+                                                <label class="form-check-label">
+                                                    <span class="fw-bold text-primary">Acepto recibir
+                                                        notificaciones</span>
+                                                    a mi correo electrónico de SICID
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <!-- Botón -->
+                                        <div class="text-center">
+                                            <button class="btn btn-inscribirme px-5 py-2">
+                                                Inscribirme
+                                            </button>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </main>
 
     <footer class="instituciones">
-
         <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 m-0">
-            <div class="col-auto m-5"><img src="./images/mideplan.jpg"></div>
-            <div class="col-auto m-5"><img src="./images/inec.jpg"></div>
-            <div class="col-auto m-5"><img src="./images/conapdis.jpg"></div>
-            <div class="col-auto m-5"><img src="./images/imas.jpg"></div>
-            <div class="col-auto m-5"><img src="./images/mrec.jpg"></div>
+            <div class="col-auto m-5"><img src="./images/mideplan.jpg" class="img-fluid footer-img"></div>
+            <div class="col-auto m-5"><img src="./images/inec.jpg" class="img-fluid footer-img"></div>
+            <div class="col-auto m-5"><img src="./images/conapdis.jpg" class="img-fluid footer-img"></div>
+            <div class="col-auto m-5"><img src="./images/imas.jpg" class="img-fluid footer-img"></div>
+            <div class="col-auto m-5"><img src="./images/mrec.jpg" class="img-fluid footer-img"></div>
         </div>
-
     </footer>
 
     <footer class="footer-links">
@@ -199,6 +348,7 @@
         </div>
     </footer>
 
+    <script src="./js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
