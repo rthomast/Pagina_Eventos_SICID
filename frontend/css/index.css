@@ -43,7 +43,7 @@ body {
     color: var(--blanco);
 }
 
-h1 {
+.bckGrdBlue {
     background-color: #EFF4F7;
     color: #3C4E80;
     height: 80px;
@@ -252,6 +252,15 @@ body {
     left: 0px;
     width: auto;
     height: 350px;
+}
+
+.imgPubTop {
+    background-size: 100%;
+    background-position: 0 30%;
+    align-content: center;
+    top: 1000px;
+    width: auto;
+    height: auto;
 }
 
 .btnIns {
