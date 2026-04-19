@@ -1,4 +1,4 @@
-.imgUC {    
+.imgUC {
     opacity: 75%;
 }
 
@@ -46,8 +46,10 @@ body {
 .bckGrdBlue {
     background-color: #EFF4F7;
     color: #3C4E80;
-    height: 80px;
+    height: 100px;
     padding-left: 100px;
+    align-content: center;
+    align-items: center;
 }
 
 .breadcrumb {
@@ -81,40 +83,6 @@ body {
     color: var(--blanco);
     font-size: 14px;
     height: 42px;
-}
-
-.btn-nueva-politica {
-    background-color: var(--azulClaro);
-    color: var(--blanco);
-    font-size: 18px;
-}
-
-.btn-nueva-politica:hover {
-    background-color: var(--azul);
-    color: var(--blanco);
-}
-
-.btn-ver-politicas {
-    background-color: var(--grisClaro);
-    display: block;
-    margin: 0 auto;
-}
-
-.list-politicas li:not(:last-child) {
-    border-bottom: 1px solid var(--gris);
-    padding: 10px 1rem 10px 1rem;
-    margin: 10px -1rem 10px -1rem;
-    /*El padre de la lista tiene p-3 de Bootstrap (.p-3 = padding: 1rem; aprox. 8px)
-    10px 1rem 10px 1rem; == top right bottom left; == top: 10px right: 1rem bottom: 10px left: 1rem
-    Con el margin negativo se saca el li 1rem hacia afuera.
-    Con el padding interno se compensa para que el texto no se desalineé.
-    Y el borde ocupa todo el ancho.
-  */
-    margin-bottom: 10px;
-}
-
-.list-politicas a {
-    color: var(--grisOscuro);
 }
 
 .svg-usuario {
@@ -167,6 +135,18 @@ body {
 
 .imgInstituciones {
     height: 50%;
+}
+
+.fechaPub {
+    background-color: #1E2E50;
+    color: white;
+    font-size: large;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font: bold 30px Helvetica;
+    height: auto;
+    width: auto;
 }
 
 .footer-links {
@@ -228,11 +208,6 @@ body {
 }
 
 body {
-    font-size: 14px !important;
-}
-
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
@@ -245,7 +220,6 @@ body {
         linear-gradient(#1E2E50CC, #1E2E5080), url("/frontend/images/pcfondo.png");
     background-size: 100%;
     background-position: 0 70%;
-    font-family: Helvetica;
     text-align: center;
     align-content: center;
     top: 3204px;
@@ -255,17 +229,22 @@ body {
 }
 
 .imgPubTop {
-    background-size: 100%;
-    background-position: 0 30%;
-    align-content: center;
-    top: 1000px;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: bottom;
+
 }
 
 .btnIns {
     background-color: var(--blanco);
     color: #1E2E50;
+}
+
+.separador {
+    border-width: 8px;
+    color: #EFF4F7;
+    opacity: 1;
 }
 
 .footer-img {
@@ -301,4 +280,98 @@ body {
 
 .btn-inscribirme:hover {
     background-color: #2f4770;
+}
+
+.pubMeta {
+    background-color: #3E578E;
+}
+
+
+/* Tabla e info adicional */
+
+.titulo-seccion {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Día */
+.agenda-dia {
+    background-color: #3f5b8a;
+    color: white;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 4px 4px 0 0;
+}
+
+/* Items */
+.agenda-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.agenda-item .hora {
+    background-color: #e9ecef;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.agenda-item .descripcion {
+    padding: 15px;
+}
+
+/* Alternado */
+.agenda-item.alt .hora,
+.agenda-item.alt .descripcion {
+    background-color: #f5f5f5;
+}
+
+/* Texto */
+.texto {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Botones */
+.btn-principal {
+    background-color: #3f5b8a;
+    color: white;
+    border-radius: 6px;
+}
+
+.btn-principal:hover {
+    background-color: #2f4770;
+}
+
+.btn-secundario {
+    background-color: #cfd8dc;
+    color: #2c3e50;
+    border-radius: 6px;
+}
+
+.btn-secundario:hover {
+    background-color: #b0bec5;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    .agenda-item {
+        flex-direction: column;
+    }
+
+    .agenda-item .hora {
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+.btnCarrousel {
+    font-size: 3rem;
+    color: #3E578E;
+}
+
+.pubEvento {
+    text-align: left;
+    font: normal normal bold 16px/24px Helvetica;
+    letter-spacing: 0px;
+    color: #3E578E;
+    text-transform: uppercase;
+    opacity: 1;
 }
