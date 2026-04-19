@@ -56,7 +56,7 @@ form.addEventListener("submit", function (e) {
     }
 
     Swal.fire({
-        
+
         title: "Inscripción Enviada",
         html: "<strong>Se envió la solicitud de inscripción con éxito.</strong> Los encargados de administrar NOTICIAS se estarán comunicando con usted, por medio del correo electrónico para notificar la aprobación de su inscripción al módulo.",
         icon: "success",
