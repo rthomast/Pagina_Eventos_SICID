@@ -375,3 +375,8 @@ body {
     text-transform: uppercase;
     opacity: 1;
 }
+
+.formConsultaCuadro {
+    height: 160px; 
+    padding-bottom: 115px;
+}
