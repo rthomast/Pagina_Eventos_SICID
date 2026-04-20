@@ -1,0 +1,57 @@
+:root {
+    --blanco: #FFFFFF;
+    --azulClaro: #3E578E;
+    --azul: #184E97;
+    --azulOscuro: #11294A;
+    --grisClaro: #ECF0F1;
+    --gris: #D6DBDF;
+    --grisOscuro: #464646;
+    --turquesa: #0DBEB0;
+    --negro: #121212;
+    --negroClaro: #282828;
+    --morado: #8E44AD;
+}
+
+body {
+    background-color: var(--blanco);
+    font-family: Helvetica;
+}
+
+.topbar {
+    height: 65px;
+    background-color: var(--azul);
+    color: var(--blanco);
+    position: relative;
+    border-bottom: 7px solid var(--morado);
+}
+
+.topbar i {
+    color: var(--blanco);
+}
+
+.logo small {
+    font-size: 10px;
+    display: block;
+}
+
+/* Barra lateral */
+.sidebar {
+    background-color: var(--blanco);
+    border-right: 1px solid var(--azulOscuro);
+    min-height: calc(100vh - 56px);
+}
+
+.sideBar li{
+    padding: 6px;  
+}
+
+.sideBar a {
+    color: var(--negro);
+    padding-left: 3rem;
+}
+
+.sideBar li:hover {
+    background-color: #EBDEF0;
+    border-right: #8E44AD solid;
+    margin-right: -1rem;
+}
