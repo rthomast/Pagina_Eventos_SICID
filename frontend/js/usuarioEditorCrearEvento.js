@@ -26,8 +26,8 @@ function prev() {
     step1.classList.add("active");
 }
 
-// ===== BOTONES DINÁMICOS =====
-document.addEventListener("click", function(e) {
+//  Botones añadir otra seccion
+document.addEventListener("click", function (e) {
 
     // FECHAS
     if (e.target.classList.contains("btn-add")) {
@@ -94,7 +94,7 @@ function validarPaso(pasoId) {
 }
 
 // Validar antes de enviar
-document.getElementById("formEvento").addEventListener("submit", function(e) {
+document.getElementById("formEvento").addEventListener("submit", function (e) {
 
     e.preventDefault();
 
@@ -108,8 +108,8 @@ document.getElementById("formEvento").addEventListener("submit", function(e) {
     }
 
     Swal.fire({
-        title: "Enviado",
-        text: "El evento fue enviado correctamente",
+        title: "Evento Enviado",
+        text: "Se envió el evento con éxito al administrador. Este debe ser revisado y aprobado por el administrador, para ser publicad0 en la sección de Eventos. Pronto recibirá una notificación para conocer si el evento fue aprobado o rechazado.",
         icon: "success"
     }).then(() => {
         this.reset();
@@ -119,8 +119,9 @@ document.getElementById("formEvento").addEventListener("submit", function(e) {
 })
 
 
-// Fechas
+// JS
 function llenarSelect(select, inicio, fin) {
+    select.innerHTML = '';
     for (let i = inicio; i <= fin; i++) {
         let option = document.createElement("option");
         option.value = i;
@@ -129,17 +130,135 @@ function llenarSelect(select, inicio, fin) {
     }
 }
 
-
-const Anio = document.getElementById("Anio");
-const Mes = document.getElementById("Mes");
-const Dia = document.getElementById("Dia");
-
-// año actual
 const anioActual = new Date().getFullYear();
 
-// Ingresar los select
-llenarSelect(Anio, 2017, anioActual);
+// Año
+document.querySelectorAll('.Anio').forEach(el => {
+    llenarSelect(el, 2017, anioActual);
+});
 
-llenarSelect(Mes, 1, 12);
+// Mes
+document.querySelectorAll('.Mes').forEach(el => {
+    llenarSelect(el, 1, 12);
+});
 
-llenarSelect(Dia, 1, 31);
+// Dia
+document.querySelectorAll('.Dia').forEach(el => {
+    llenarSelect(el, 1, 31);
+});
+
+
+// Selector de horas
+function llenarHoras() {
+    const selectoresHora = document.querySelectorAll('.select-hora');
+
+    selectoresHora.forEach(select => {
+        select.innerHTML = '';
+
+        for (let i = 0; i <= 23; i++) {
+            let option = document.createElement("option");
+
+            let horaFormateada = i.toString().padStart(2, '0') + ':00';
+
+            option.value = horaFormateada;
+            option.text = horaFormateada;
+            select.appendChild(option);
+        }
+    });
+}
+
+llenarHoras();
+
+
+// Quill, herrramienta de texto
+document.addEventListener("DOMContentLoaded", function () {
+
+    const quillObjetivos = new Quill('#editorObjetivos', {
+        theme: 'snow',
+        placeholder: 'Ingrese los objetivos...',
+    });
+
+    const quillAgenda = new Quill('#editorAgenda', {
+        theme: 'snow',
+        placeholder: 'Ingrese la agenda...',
+    });
+
+    const quillLecturaFacil = new Quill('#editorLecturaFacil', {
+        theme: 'snow',
+        placeholder: 'Ingrese información de lectura facil...',
+    });
+
+    const quillInfoAdicional = new Quill('#editorInfoAdicional', {
+        theme: 'snow',
+        placeholder: 'Ingrese información adicional...',
+    });
+
+    // Guardarlos en un objeto (MUY IMPORTANTE para usarlos luego)
+    const editores = {
+        objetivos: quillObjetivos,
+        agenda: quillAgenda,
+        lecturaFacil: quillLecturaFacil,
+        infoAdicional: quillInfoAdicional
+    };
+
+    // Evento submit del form
+    const form = document.getElementById("formEvento");
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Obtener contenido de cada editor
+        const objetivos = editores.objetivos.root.innerHTML;
+        const agenda = editores.agenda.root.innerHTML;
+        const lecturaFacil = editores.lecturaFacil.root.innerHTML;
+        const infoAdicional = editores.infoAdicional.root.innerHTML;
+
+        // Validación básica
+        if (estaVacio(objetivos) || estaVacio(agenda) || estaVacio(lecturaFacil) || estaVacio(infoAdicional)) {
+            Swal.fire({
+                title: "Campos incompletos",
+                text: "Debe completar todos los campos de cuadros de texto",
+                icon: "warning"
+            });
+            return;
+        }
+
+        // Datos separados
+        console.log("Objetivos:", objetivos);
+        console.log("Agenda:", agenda);
+        console.log("Agenda:", lecturaFacil);
+        console.log("Info adicional:", infoAdicional);
+
+        // Aquí puedes enviarlos al backend (fetch)
+
+        Swal.fire({
+            title: "Enviado",
+            text: "Formulario enviado correctamente",
+            icon: "success"
+        }).then(() => {
+            this.reset();
+            location.reload(); // opcional
+        });
+
+        form.reset();
+
+        // Limpiar editores manualmente
+        editores.objetivos.setContents([]);
+        editores.descripcion.setContents([]);
+        editores.info.setContents([]);
+
+
+    });
+
+});
+
+
+// Redes elegidas
+function obtenerRedesSeleccionadas() {
+    const seleccionados = document.querySelectorAll('input[type="checkbox"]:checked');
+
+    const valores = Array.from(seleccionados).map(cb => cb.value);
+
+    console.log("Redes elegidas:", valores); // Ejemplo: ["Facebook", "Twitter", "LinkedIn"]
+    return valores;
+}

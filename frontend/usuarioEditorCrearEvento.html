@@ -15,6 +15,9 @@
     <!-- Estilos propios -->
     <link rel="stylesheet" href="css/usuarioEditorCrearEvento.css">
 
+    <!-- Quill, para barra de herramientas de texto -->
+    <link href="https://cdn.jsdelivr.net/npm/quill@1.3.7/dist/quill.snow.css" rel="stylesheet">
+
     <title>Crear Evento</title>
 
 </head>
@@ -188,20 +191,20 @@
                             <form id="formEvento" class="needs-validation" novalidate>
 
                                 <!-- Parte 1 -->
-                                <div id="paso1">
+                                <div id="paso1" class="text-center">
 
                                     <div class="row container g-3 p-3">
 
                                         <!-- Fecha publicación -->
                                         <div class="col-md-4">*Fecha Publicación</div>
                                         <div class="col-md-8 d-flex">
-                                            <div class="d-flex flex-md-fill col-auto gap-5">
+                                            <div class="d-flex flex-md-fill col-auto gap-5 grupoFecha">
                                                 <label>Año</label>
-                                                <select id="Anio" class="form-select"></select>
+                                                <select class="form-select Anio"></select>
                                                 <label>Mes</label>
-                                                <select id="Mes" class="form-select"></select>
+                                                <select class="form-select Mes"></select>
                                                 <label>Dia</label>
-                                                <select id="Dia" class="form-select"></select>
+                                                <select class="form-select Dia"></select>
                                             </div>
                                         </div>
 
@@ -216,11 +219,11 @@
                                                 <div class="col-md-6 d-flex">
                                                     <div class="d-flex flex-md-fill col-auto gap-5">
                                                         <label>Año</label>
-                                                        <select id="Anio" class="form-select"></select>
+                                                        <select class="form-select Anio"></select>
                                                         <label>Mes</label>
-                                                        <select id="Mes" class="form-select"></select>
+                                                        <select class="form-select Mes"></select>
                                                         <label>Dia</label>
-                                                        <select id="Dia" class="form-select" ></select>
+                                                        <select class="form-select Dia"></select>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-2 d-flex gap-2">
@@ -232,22 +235,30 @@
 
                                         </div>
 
-                                        <!-- Horario -->
-                                        <div class="col-md-4">*Horario</div>
+                                        <!-- Horario inicio -->
+                                        <div class="col-md-4">*Horario del Evento</div>
                                         <div class="col-md-8 d-flex gap-2">
-                                            <input type="time" class="form-control" required>
-                                            <input type="time" class="form-control" required>
+                                            <label>Hora de Inicio</label>
+                                            <select class="form-select select-hora" required></select>
+                                            <label>Hora de Finalización</label>
+                                            <select class="form-select select-hora" required></select>
                                         </div>
 
                                         <!-- Links -->
                                         <div class="col-md-4">*Lugar del Evento</div>
                                         <div class="col-md-8">
-                                            <input class="form-control" placeholder="Adjuntar link" required>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fa-solid fa-link"></i></span>
+                                                <input class="form-control" placeholder="Adjuntar link" required>
+                                            </div>
                                         </div>
 
                                         <div class="col-md-4">*Google Calendar</div>
                                         <div class="col-md-8">
-                                            <input class="form-control" placeholder="Adjuntar link" required>
+                                            <div class="input-group">
+                                                <span class="input-group-text"><i class="fa-solid fa-link"></i></span>
+                                                <input class="form-control" placeholder="Adjuntar link" required>
+                                            </div>
                                         </div>
 
                                         <!-- Descripción -->
@@ -257,9 +268,21 @@
                                         </div>
 
                                         <!-- Objetivos -->
-                                        <div class="col-md-4">*Objetivos</div>
-                                        <div class="col-md-8">
-                                            <textarea class="form-control" rows="6" required></textarea>
+                                        <div class="col-md-4 pt-3">*Objetivos</div>
+                                        <div class="col-md-8 txtCuadro">
+                                            <div id="editorObjetivos"></div>
+                                        </div>
+
+                                        <!-- Agenda del event -->
+                                        <div class="col-md-4 pt-3">**Agenda/ Programa del evento</div>
+                                        <div class="col-md-8 txtCuadro">
+                                            <div id="editorAgenda"></div>
+                                        </div>
+
+                                        <!-- Agenda del evento de Lectura Fácil -->
+                                        <div class="col-md-4 pt-3">*Agenda del evento de Lectura Fácil</div>
+                                        <div class="col-md-8 txtCuadro">
+                                            <div id="editorLecturaFacil"></div>
                                         </div>
 
                                     </div>
@@ -272,59 +295,84 @@
                                 </div>
 
                                 <!-- Parte 2 -->
-                                <div id="paso2" class="d-none">
+                                <div id="paso2" class="d-none text-center">
 
                                     <div class="row g-3">
 
-                                        <div class="col-md-4">*Nombre Completo</div>
-                                        <div class="col-md-8"><input class="form-control" required></div>
+                                        <div class="col-md-4 mt-4">
+                                            *Informacion de contacto
+                                        </div>
 
-                                        <div class="col-md-4">*Correo</div>
-                                        <div class="col-md-8"><input type="email" class="form-control" required></div>
+                                        <div class="col-md-8 separadorDireccion mb-5">
+
+                                            <div class="row mb-2 align-items-center">
+                                                <div class="col-md-3"><label class="col-form-label">
+                                                        *Nombre Completo</label>
+                                                </div>
+                                                <div class="col-md-9"><input type="text" class="form-control"
+                                                        placeholder="Introduzca el dato solicitado" required></div>
+                                            </div>
+
+                                            <div class="row mb-2 align-items-center">
+                                                <div class="col-md-3"><label>*Correo Electrónico</label></div>
+                                                <div class="col-md-9"><input type="email" class="form-control"
+                                                        placeholder="Introduzca el dato solicitado" required></div>
+                                            </div>
+                                        </div>
+
+
 
                                         <!-- IMÁGENES -->
                                         <div id="imagenesContainer">
 
-                                            <div class="row g-2 align-items-center imagen-item">
+                                            <div class="row g-2 align-items-center imagen-item p-2">
                                                 <div class="col-md-4">*Imágenes</div>
+
                                                 <div class="col-md-6">
-                                                    <input type="file" class="form-control" accept=".png,.jpg,.jpeg"
-                                                        required>
+                                                    <div class="input-group">
+                                                        <span class="input-group-text"><i
+                                                                class="fa-solid fa-paperclip"></i></span>
+                                                        <input type="file" class="form-control input-imagen"
+                                                            accept=".png,.jpg,.jpeg" required></input>
+                                                    </div>
+                                                    <small class="text-muted">máximo 10 MB por archivo</small>
                                                 </div>
+
                                                 <div class="col-md-2 d-flex gap-2">
                                                     <button type="button" class="btn btn-primary btn-add-img">+</button>
                                                     <button type="button"
                                                         class="btn btn-secondary btn-remove-img">-</button>
                                                 </div>
 
-                                                <div class="col-md-4">Descripción</div>
+                                                <div class="col-md-4">*Descripción de imagen</div>
                                                 <div class="col-md-8">
                                                     <input class="form-control" required>
                                                 </div>
                                             </div>
-
                                         </div>
 
                                         <div class="col-md-4">*Público Meta</div>
-                                        <div class="col-md-8"><input class="form-control"></div>
+                                        <div class="col-md-8"><input class="form-control" required></div>
 
                                         <!-- CUPO -->
                                         <div class="col-md-4">*Cupo</div>
                                         <div class="col-md-8">
-                                            <input type="number" min="0" max="9999" class="form-control" required>
+                                            <input type="number" min="0" max="9999" class="form-control cuadroCupo"
+                                                placeholder="0000" required>
                                         </div>
 
                                         <!-- Info adicional -->
-                                        <div class="col-md-4">*Información Adicional</div>
-                                        <div class="col-md-8">
-                                            <textarea class="form-control" rows="5" required></textarea>
+                                        <div class="col-md-4 pt-3">*Información Adicional</div>
+                                        <div class="col-md-8 txtCuadro">
+                                            <div id="editorInfoAdicional"></div>
                                         </div>
 
                                         <!-- REFERENCIAS -->
                                         <div id="referenciasContainer">
 
-                                            <div class="row g-2 referencia-item">
-                                                <div class="col-md-4">Referencia</div>
+                                            <div class="row g-2 referencia-item py-2">
+                                                <div class="col-md-4">Referencias de <br>
+                                                    información brindada</div>
                                                 <div class="col-md-6"><input class="form-control" required></div>
                                                 <div class="col-md-2 d-flex gap-2">
                                                     <button type="button" class="btn btn-primary btn-add-ref">+</button>
@@ -334,35 +382,78 @@
 
                                                 <div class="col-md-4"></div>
                                                 <div class="col-md-8">
-                                                    <input class="form-control" placeholder="Link referencia" required>
+                                                    <di class="input-group">
+                                                        <span class="input-group-text"><i
+                                                                class="fa-solid fa-link"></i></span>
+                                                        <input class="form-control"
+                                                            placeholder="Adjuntar link de la referencia" required>
                                                 </div>
                                             </div>
-
                                         </div>
 
-                                        <div class="col-md-4">*Palabras clave</div>
-                                        <div class="col-md-8"><input class="form-control" required></div>
+                                        <!-- Palabras clave -->
 
-                                        <div class="col-md-4">Evento importante</div>
-                                        <div class="col-md-8">
-                                            <input type="radio" name="importante" required> Sí
-                                            <input type="radio" name="importante" required> No
+                                        <div class="col-md-4 py-3">*Palabras clave</div>
+                                        <div class="col-md-8 py-3"><input class="form-control" required></div>
+
+                                        <div class="col-md-4 py-3">*Fijar como evento importante</div>
+                                        <div class="col-md-8 py-3 text-start">
+                                            <input type="radio" name="fijarImportante" required> Sí
+                                            <input type="radio" name="fijarImportante" required> No
                                         </div>
 
-                                    </div>
 
-                                    <div class="text-center mt-4">
-                                        <button type="button" class="btn btn-secondary" onclick="prev()">←
-                                            Anterior</button>
-                                        <button type="submit" class="btn btn-primary">Enviar →</button>
-                                    </div>
+                                        <!-- Fin visualizacion evento -->
+                                        <div class="col-md-4 py-3">*Fecha final de visualización del evento</div>
+                                        <div class="col-md-8 d-flex gap-2 py-3">
+                                            <div class="d-flex flex-md-fill col-auto gap-5 grupoFecha">
+                                                <label>Año</label>
+                                                <select class="form-select Anio" required></select>
+                                                <label>Mes</label>
+                                                <select class="form-select Mes" required></select>
+                                                <label>Dia</label>
+                                                <select class="form-select Dia" required></select>
+                                            </div>
+                                        </div>
 
+                                        <!-- Redes sociales -->
+                                        <div class="row mb-3">
+                                            <!-- Etiqueta lateral -->
+                                            <div class="col-md-4">
+                                                <label>*Redes Sociales</label>
+                                            </div>
+
+                                            <div class="col-md-8">
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="checkbox" id="checkFacebook"
+                                                        value="facebook">
+                                                    <label class="form-check-label" for="checkFacebook">Facebook</label>
+                                                </div>
+
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="checkbox" id="checkTwitter"
+                                                        value="twitter">
+                                                    <label class="form-check-label" for="checkTwitter">Twitter</label>
+                                                </div>
+
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="checkbox" id="checkLinkedIn"
+                                                        value="linkedin">
+                                                    <label class="form-check-label" for="checkLinkedIn">LinkedIn</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="text-center mt-4">
+                                            <button type="button" class="btn btn-secondary" onclick="prev()">←
+                                                Anterior</button>
+                                            <button type="submit" class="btn btn-primary">Enviar →</button>
+                                        </div>
+                                    </div>
                                 </div>
-
                             </form>
-
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -377,9 +468,11 @@
 
     </main>
 
-    <script src="/frontend/js/usuarioEditorCrearEvento.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quill@1.3.7/dist/quill.min.js"></script>
+    <script src="/frontend/js/usuarioEditorCrearEvento.js"></script>
 
 </body>
 
