@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/formulario_eventos.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Visualizar Evento</title>
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Topbar -->
+    <div class="container-fluid topbar flex-shrink-0">
+        <div class="row align-items-center">
+
+            <!-- Logo -->
+            <div class="col-12 col-md-3 mb-2 mb-md-0">
+                <a href="" class="logo">
+                    <img src="/frontend/images/Logo SICID.svg" alt="Logo SICID" class="img-fluid">
+                </a>
+            </div>
+
+            <!-- Idioma -->
+            <div class="col-12 col-md-3 d-flex align-items-center gap-2">
+                <p class="mb-0">Idioma:</p>
+
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle p-0 border px-2 py-1 rounded" href="#" data-bs-toggle="dropdown">
+                        ES
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="">Español</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Espacio libre + A - contraste y inicio sesion -->
+            <div class="col-12 col-md-3"></div>
+
+            <!-- Opciones -->
+            <div class="col-12 col-md-3">
+                <div class="row d-flex align-items-center justify-content-around">
+                    <div class="col-3 d-flex align-items-center justify-content-end">
+
+                        <button class="btn btn-outline-dark px-3 py-2">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+
+                        <button class="btn btn-outline-dark px-3 py-2 m-2">
+                            <i class="fa-solid fa-a"></i>
+                        </button>
+
+                        <button class="btn btn-outline-dark px-3 py-2">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="col-auto">
+                        <button class="btn btn-outline-dark px-3 py-2">
+                            <i class="fa-solid fa-circle-half-stroke"></i>
+                        </button>
+                    </div>
+
+                    <div class="col-auto">
+                        <button class="btn btn-outline-dark px-3 py-2">
+                            Iniciar sesión
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Layout principal-->
+    <header class="container-fluid">
+
+        <!-- NAVBAR-->
+        <nav class="row g-0">
+            <div class="col-12 barraNav ">
+                <ul class="nav nav-tabs d-flex flex-wrap justify-content-around align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">SICID</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Certificaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Formación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Productos y <br>Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Estadísticas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">PONADIS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Comisiones</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">
+                            Noticias y <br>Eventos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="">Noticias</a></li>
+                            <li><a class="dropdown-item" href="">Eventos</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="flex-grow-1">
+
+        <!-- Titulo -->
+        <div class="container">
+            <div class="col-12 bckGrdBlue">
+                <h1>Eventos | <strong>Política Nacional de Discapacidad</strong></h1>
+            </div>
+        </div>
+
+        <!-- Breadcumbs -->
+        <div class="container my-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb mb-0">
+
+                    <li class="breadcrumb-item">
+                        <a href="./index.html">Inicio</a>
+                    </li>
+
+                    <li class="breadcrumb-item">
+                        <a href="./eventos.html">Eventos</a>
+                    </li>
+
+                    <li class="breadcrumb-item">
+                        <a href="./eventos.html">Política Nacional de Discapacidad</a>
+                    </li>
+
+                    <li class="breadcrumb-item">
+                        <a href="./visualizar_eventos.html">Evento Política Nacional de Discapacidad</a>
+                    </li>
+
+                    <li class="breadcrumb-item active" aria-current="page">
+                        <strong>Formulario Inscripción</strong>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+
+        <!-- Publicacion evento -->
+        <div class="container">
+
+            <div class="row col-12">
+                <img class="imgPubTop" src="./images/imgPublicacionTop@2x.png" alt="Imagen de personas en conferencia">
+            </div>
+
+            <article class="row d-flex flex-column g-0 bckGrdBlue">
+                <span class="col-auto fechaPub p-3">01 <br>AGO</span>
+                <span class="col-auto ps-4 pt-4">
+                    <h2><strong>Formulario de Inscripción:</strong> Publicación de Política Nacional de Discapacidad
+                        2020 - 2030</h2>
+                </span>
+            </article>
+        </div>
+
+        <div class="container my-5 paddingFomr">
+
+            <!-- TÍTULO -->
+            <h3 class="text-center fw-bold mb-4">
+                Información requerida para <br> Inscripción del Evento
+            </h3>
+
+            <!-- STEPS -->
+            <div class="text-center mb-4">
+                <span class="step active" id="step1">1</span>
+                <span class="step" id="step2">2</span>
+            </div>
+
+
+            <form id="formMultiStep">
+
+                <!-- Formulario parte 1 -->
+                <div class="step-content" id="content1">
+
+                    <div class="row g-3">
+                        <div class="col-md-4"><label>*Nombre Completo</label></div>
+                        <div class="col-md-8"><input type="text" class="form-control"
+                                placeholder="Introduzca el dato solicitado" required></div>
+
+                        <div class="col-md-4"><label>*Tipo de Identificación</label></div>
+                        <div class="col-md-8">
+                            <select class="form-select" required>
+                                <option value="">Seleccione el dato solicitado</option>
+                                <option>Cédula</option>
+                                <option>Pasaporte</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-4"><label>*Número de identificación</label></div>
+                        <div class="col-md-8"><input type="text" class="form-control"
+                                placeholder="Introduzca el dato solicitado" required></div>
+
+                        <!-- Dirección -->
+                        <div class="row mb-3 mt-4">
+                            <!-- Título Dirección -->
+                            <div class="col-md-4 mt-4">
+                                Dirección
+                            </div>
+
+                            <div class="col-md-8 separadorDireccion">
+
+                                <div class="row mb-2 align-items-center">
+                                    <div class="col-md-3"><label class="col-form-label">*Provincia</label></div>
+                                    <div class="col-md-9"><input type="text" class="form-control"
+                                            placeholder="Introduzca el dato solicitado" required></div>
+                                </div>
+
+                                <div class="row mb-2 align-items-center">
+                                    <div class="col-md-3"><label class="col-form-label">*Cantón</label></div>
+                                    <div class="col-md-9"><input type="text" class="form-control"
+                                            placeholder="Introduzca el dato solicitado" required></div>
+                                </div>
+
+                                <div class="row mb-2 align-items-center">
+                                    <div class="col-md-3"><label class="col-form-label">*Distrito</label></div>
+                                    <div class="col-md-9"><input type="text" class="form-control"
+                                            placeholder="Introduzca el dato solicitado" required></div>
+                                </div>
+
+                                <div class="row mb-2 align-items-center">
+                                    <div class="col-md-3"><label class="col-form-label">Otras señas</label></div>
+                                    <div class="col-md-9"><input type="text" class="form-control"
+                                            placeholder="Introduzca el dato solicitado"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4"><label>*Correo Electrónico</label></div>
+                        <div class="col-md-8"><input type="email" class="form-control"
+                                placeholder="Introduzca el dato solicitado" required></div>
+
+                        <div class="col-md-4"><label>*Teléfono</label></div>
+                        <div class="col-md-8"><input type="text" class="form-control"
+                                placeholder="Introduzca el dato solicitado" required></div>
+
+                        <div class="row mb-3 mt-4">
+                            <div class="col-md-4 mt-4">
+                                Profesión
+                            </div>
+
+                            <div class="col-md-8 separadorDireccion">
+
+                                <div class="row mb-2 align-items-center">
+                                    <div class="col-md-3"><label class="col-form-label">*Profesión</label></div>
+                                    <div class="col-md-9"><input type="text" class="form-control"
+                                            placeholder="Introduzca el dato solicitado" required></div>
+                                </div>
+
+                                <div class="row mb-2 align-items-center">
+                                    <div class="col-md-3">
+                                        <label class="col-form-label">
+                                            *Entidad para <br>la que trabaja
+                                        </label>
+                                    </div>
+                                    <div class="col-md-9"><input type="text" class="form-control"
+                                            placeholder="Introduzca el dato solicitado" required></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4"><label>*Tipo de deficiencia</label></div>
+                        <div class="col-md-8">
+                            <select class="form-select" required>
+                                <option value="">Seleccione el dato solicitado</option>
+                                <option>Fisica</option>
+                                <option>Visual</option>
+                                <option>Auditiva</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-4"><label>*¿Requiere transporte?</label></div>
+                        <div class="col-md-8">
+                            <input type="radio" name="transporte" required> Sí
+                            <input type="radio" name="transporte" required> No
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button type="button" class="btn btn-primary" onclick="nextStep()">Siguiente →</button>
+                    </div>
+                </div>
+
+                <!-- Formulario parte 2 -->
+                <div class="step-content d-none" id="content2">
+
+                    <div class="row g-3">
+
+                        <div class="col-md-4"><label>*Monto aproximado<br>del costo del transporte</label></div>
+                        <div class="col-md-8"><input type="text" class="form-control"
+                                placeholder="Introduzca el dato solicitado" required></div>
+
+                        <div class="col-md-4"><label>*Requiere hospedaje<br>para asistir al evento</label></div>
+                        <div class="col-md-8">
+                            <input type="radio" name="hospedaje" required> Sí
+                            <input type="radio" name="hospedaje" required> No
+                        </div>
+
+                        <div class="col-md-4"><label>*Monto aproximado<br>del costo del hospedaje</label></div>
+                        <div class="col-md-8"><input type="text" class="form-control"
+                                placeholder="Introduzca el dato solicitado" required></div>
+
+                        <div class="col-md-4"><label>*Alergias a <br>medicamentos</label></div>
+                        <div class="col-md-8">
+                            <input type="radio" name="alergia" required> Sí
+                            <input type="radio" name="alergia" required> No
+                        </div>
+
+                        <div class="col-md-4"><label>*Describa a que medicamentos <br>o alimentos tiene alergias</label>
+                        </div>
+                        <div class="col-md-8"><input type="text" class="form-control"
+                                placeholder="Introduzca el dato solicitado" required></div>
+
+                        <div class="col-md-4"><label>*Requiere <br>interprete de señas</label></div>
+                        <div class="col-md-8">
+                            <input type="radio" name="interprete" required> Sí
+                            <input type="radio" name="interprete" required> No
+                        </div>
+
+                        <div class="col-md-4"><label>*Mencione otros apoyos que <br>se deben de considerar para
+                                <br>asistir al evento</label></div>
+                        <div class="col-md-8"><input type="text" class="form-control"
+                                placeholder="Introduzca el dato solicitado"></div>
+
+                        <div class="row mb-3 mt-4">
+                            <div class="col-md-4 mt-4">
+                                Adjuntar documentos
+                            </div>
+
+                            <div class="col-md-8 separadorDireccion">
+
+                                <div class="container my-4">
+
+                                    <div id="contenedorImagenes">
+
+                                        <!-- ITEM -->
+                                        <div class="row align-items-center mb-3 item-imagen">
+
+                                            <!-- Label -->
+                                            <div class="col-md-3">
+                                                <label>Imágenes</label>
+                                            </div>
+
+                                            <!-- Input file -->
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <span class="input-group-text"><i class="fa-solid fa-paperclip"></i></span>
+                                                    <input type="file" class="form-control input-imagen"
+                                                        accept=".png,.jpg,.jpeg" required>
+                                                </div>
+                                                <small class="text-muted">máximo 10 MB por archivo</small>
+                                            </div>
+
+                                            <!-- Botones -->
+                                            <div class="col-md-3 d-flex gap-2">
+                                                <button type="button" class="btn btn-primary btn-add">+</button>
+                                                <button type="button" class="btn btn-secondary btn-remove">-</button>
+                                            </div>
+
+                                            <!-- Descripción -->
+                                            <div class="col-md-3 mt-2">
+                                                <label>Descripción de imagen</label>
+                                            </div>
+                                            <div class="col-md-6 mt-2">
+                                                <input type="text" class="form-control"
+                                                    placeholder="Introduzca el dato solicitado" required>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-12 mt-3">
+                                <input type="checkbox" required> Autorizo notificaciones de este evento por medio de correo
+                                electrónico y teléfono
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <button type="button" class="btn btn-secondary" onclick="prevStep()">← Anterior</button>
+                            <button type="submit" class="btn btn-primary">Enviar ✔</button>
+                        </div>
+                    </div>
+            </form>
+
+        </div>
+
+    </main>
+
+    <footer class="instituciones">
+        <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 m-0">
+            <div class="col-auto m-5"><img src="./images/mideplan.jpg" class="img-fluid footer-img"></div>
+            <div class="col-auto m-5"><img src="./images/inec.jpg" class="img-fluid footer-img"></div>
+            <div class="col-auto m-5"><img src="./images/conapdis.jpg" class="img-fluid footer-img"></div>
+            <div class="col-auto m-5"><img src="./images/imas.jpg" class="img-fluid footer-img"></div>
+            <div class="col-auto m-5"><img src="./images/mrec.jpg" class="img-fluid footer-img"></div>
+        </div>
+    </footer>
+
+    <footer class="footer-links">
+        <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 m-2">
+            <a href="">Marco Legal</a>
+            <span>|</span>
+            <a href="">Términos de accesibilidad</a>
+            <span>|</span>
+            <a href="">Créditos</a>
+            <span>|</span>
+            <a href="">Directorio de ONGs</a>
+            <span>|</span>
+            <a href="">Contacto</a>
+        </div>
+    </footer>
+
+    <script src="./js/formulario_eventos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

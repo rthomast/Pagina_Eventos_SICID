@@ -1,0 +1,28 @@
+.step {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #ccc;
+    color: white;
+    line-height: 35px;
+    margin: 5px;
+}
+
+.step.active {
+    background: #3f5b8a;
+}
+
+.paddingFomr {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.separadorDireccion {
+    border-left: 4px solid gray;
+}
+
+.input-group-text {
+    background: #6c757d;
+    color: white;
+}
