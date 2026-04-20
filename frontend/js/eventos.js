@@ -17,10 +17,10 @@ const hastaAnio = document.getElementById("hastaAnio");
 const hastaMes = document.getElementById("hastaMes");
 const hastaDia = document.getElementById("hastaDia");
 
-// AÑO ACTUAL
+// Año actual
 const anioActual = new Date().getFullYear();
 
-// 🔹 Llenar selects
+// llenar Select
 llenarSelect(desdeAnio, 2017, anioActual);
 llenarSelect(hastaAnio, 2017, anioActual);
 
