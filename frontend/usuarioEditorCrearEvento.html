@@ -200,16 +200,17 @@
                                         <div class="col-md-8 d-flex">
                                             <div class="d-flex flex-md-fill col-auto gap-5 grupoFecha">
                                                 <label>Año</label>
-                                                <select class="form-select Anio"></select>
+                                                <select class="form-select Anio" name="anioPub"></select>
                                                 <label>Mes</label>
-                                                <select class="form-select Mes"></select>
+                                                <select class="form-select Mes" name="mesPub"></select>
                                                 <label>Dia</label>
-                                                <select class="form-select Dia"></select>
+                                                <select class="form-select Dia" name="diaPub"></select>
                                             </div>
                                         </div>
 
                                         <div class="col-md-4">*Nombre del Evento</div>
-                                        <div class="col-md-8"><input class="form-control" required></div>
+                                        <div class="col-md-8"><input class="form-control" name="nombreEvento" required>
+                                        </div>
 
                                         <!-- FECHAS DINÁMICAS -->
                                         <div id="fechasContainer">
@@ -219,11 +220,11 @@
                                                 <div class="col-md-6 d-flex">
                                                     <div class="d-flex flex-md-fill col-auto gap-5">
                                                         <label>Año</label>
-                                                        <select class="form-select Anio"></select>
+                                                        <select class="form-select Anio" name="anioEve"></select>
                                                         <label>Mes</label>
-                                                        <select class="form-select Mes"></select>
+                                                        <select class="form-select Mes" name="mesEve"></select>
                                                         <label>Dia</label>
-                                                        <select class="form-select Dia"></select>
+                                                        <select class="form-select Dia" name="diaEve"></select>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-2 d-flex gap-2">
@@ -239,9 +240,9 @@
                                         <div class="col-md-4">*Horario del Evento</div>
                                         <div class="col-md-8 d-flex gap-2">
                                             <label>Hora de Inicio</label>
-                                            <select class="form-select select-hora" required></select>
+                                            <select class="form-select select-hora" name="inicioEve" required></select>
                                             <label>Hora de Finalización</label>
-                                            <select class="form-select select-hora" required></select>
+                                            <select class="form-select select-hora" name="finEve" required></select>
                                         </div>
 
                                         <!-- Links -->
@@ -249,7 +250,8 @@
                                         <div class="col-md-8">
                                             <div class="input-group">
                                                 <span class="input-group-text"><i class="fa-solid fa-link"></i></span>
-                                                <input class="form-control" placeholder="Adjuntar link" required>
+                                                <input class="form-control" name="lugarEve" placeholder="Adjuntar link"
+                                                    required>
                                             </div>
                                         </div>
 
@@ -257,32 +259,36 @@
                                         <div class="col-md-8">
                                             <div class="input-group">
                                                 <span class="input-group-text"><i class="fa-solid fa-link"></i></span>
-                                                <input class="form-control" placeholder="Adjuntar link" required>
+                                                <input class="form-control" name="googleCaledar"
+                                                    placeholder="Adjuntar link" required>
                                             </div>
                                         </div>
 
                                         <!-- Descripción -->
                                         <div class="col-md-4">*Descripción</div>
                                         <div class="col-md-8">
-                                            <textarea class="form-control" rows="4" required></textarea>
+                                            <textarea class="form-control" name="descripcion" rows="4"
+                                                required></textarea>
                                         </div>
 
                                         <!-- Objetivos -->
-                                        <div class="col-md-4 pt-3">*Objetivos</div>
-                                        <div class="col-md-8 txtCuadro">
-                                            <div id="editorObjetivos"></div>
+                                        <div class="col-md-4">*Objetivos del evento</div>
+                                        <div class="col-md-8">
+                                            <textarea class="form-control" name="objetivos" rows="4"
+                                                required></textarea>
                                         </div>
 
                                         <!-- Agenda del event -->
-                                        <div class="col-md-4 pt-3">**Agenda/ Programa del evento</div>
-                                        <div class="col-md-8 txtCuadro">
-                                            <div id="editorAgenda"></div>
+                                        <div class="col-md-4">*Agenda/ Programa del evento</div>
+                                        <div class="col-md-8">
+                                            <textarea class="form-control" name="agenda" rows="4" required></textarea>
                                         </div>
 
                                         <!-- Agenda del evento de Lectura Fácil -->
-                                        <div class="col-md-4 pt-3">*Agenda del evento de Lectura Fácil</div>
-                                        <div class="col-md-8 txtCuadro">
-                                            <div id="editorLecturaFacil"></div>
+                                        <div class="col-md-4">*Agenda del evento de Lectura Fácil</div>
+                                        <div class="col-md-8">
+                                            <textarea class="form-control" name="lecturaFacil" rows="4"
+                                                required></textarea>
                                         </div>
 
                                     </div>
@@ -310,13 +316,15 @@
                                                         *Nombre Completo</label>
                                                 </div>
                                                 <div class="col-md-9"><input type="text" class="form-control"
-                                                        placeholder="Introduzca el dato solicitado" required></div>
+                                                        name="nombre" placeholder="Introduzca el dato solicitado"
+                                                        required></div>
                                             </div>
 
                                             <div class="row mb-2 align-items-center">
                                                 <div class="col-md-3"><label>*Correo Electrónico</label></div>
                                                 <div class="col-md-9"><input type="email" class="form-control"
-                                                        placeholder="Introduzca el dato solicitado" required></div>
+                                                        name="correo" placeholder="Introduzca el dato solicitado"
+                                                        required></div>
                                             </div>
                                         </div>
 
@@ -332,8 +340,8 @@
                                                     <div class="input-group">
                                                         <span class="input-group-text"><i
                                                                 class="fa-solid fa-paperclip"></i></span>
-                                                        <input type="file" class="form-control input-imagen"
-                                                            accept=".png,.jpg,.jpeg" required></input>
+                                                        <input type="file" name="" class="form-control input-imagen"
+                                                            accept=".png,.jpg,.jpeg"></input>
                                                     </div>
                                                     <small class="text-muted">máximo 10 MB por archivo</small>
                                                 </div>
@@ -346,25 +354,28 @@
 
                                                 <div class="col-md-4">*Descripción de imagen</div>
                                                 <div class="col-md-8">
-                                                    <input class="form-control" required>
+                                                    <input type="text" name="descripcionImg" class="form-control"
+                                                        required>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="col-md-4">*Público Meta</div>
-                                        <div class="col-md-8"><input class="form-control" required></div>
+                                        <div class="col-md-8"><input class="form-control" name="publicoMeta" required>
+                                        </div>
 
                                         <!-- CUPO -->
                                         <div class="col-md-4">*Cupo</div>
                                         <div class="col-md-8">
                                             <input type="number" min="0" max="9999" class="form-control cuadroCupo"
-                                                placeholder="0000" required>
+                                                name="cupo" placeholder="0000" required>
                                         </div>
 
                                         <!-- Info adicional -->
-                                        <div class="col-md-4 pt-3">*Información Adicional</div>
-                                        <div class="col-md-8 txtCuadro">
-                                            <div id="editorInfoAdicional"></div>
+                                        <div class="col-md-4">*Información Adicional</div>
+                                        <div class="col-md-8">
+                                            <textarea class="form-control" name="infoAdicional" rows="4"
+                                                required></textarea>
                                         </div>
 
                                         <!-- REFERENCIAS -->
@@ -373,7 +384,8 @@
                                             <div class="row g-2 referencia-item py-2">
                                                 <div class="col-md-4">Referencias de <br>
                                                     información brindada</div>
-                                                <div class="col-md-6"><input class="form-control" required></div>
+                                                <div class="col-md-6"><input class="form-control" name="descLink"
+                                                        required></div>
                                                 <div class="col-md-2 d-flex gap-2">
                                                     <button type="button" class="btn btn-primary btn-add-ref">+</button>
                                                     <button type="button"
@@ -385,7 +397,7 @@
                                                     <di class="input-group">
                                                         <span class="input-group-text"><i
                                                                 class="fa-solid fa-link"></i></span>
-                                                        <input class="form-control"
+                                                        <input class="form-control" name="link"
                                                             placeholder="Adjuntar link de la referencia" required>
                                                 </div>
                                             </div>
@@ -394,12 +406,13 @@
                                         <!-- Palabras clave -->
 
                                         <div class="col-md-4 py-3">*Palabras clave</div>
-                                        <div class="col-md-8 py-3"><input class="form-control" required></div>
+                                        <div class="col-md-8 py-3"><input class="form-control" name="palabrasClave"
+                                                required></div>
 
                                         <div class="col-md-4 py-3">*Fijar como evento importante</div>
                                         <div class="col-md-8 py-3 text-start">
-                                            <input type="radio" name="fijarImportante" required> Sí
-                                            <input type="radio" name="fijarImportante" required> No
+                                            <input type="radio" name="fijarImportante" value="Si" required> Sí
+                                            <input type="radio" name="fijarImportante" value="No" required> No
                                         </div>
 
 
@@ -408,11 +421,11 @@
                                         <div class="col-md-8 d-flex gap-2 py-3">
                                             <div class="d-flex flex-md-fill col-auto gap-5 grupoFecha">
                                                 <label>Año</label>
-                                                <select class="form-select Anio" required></select>
+                                                <select class="form-select Anio" name="anioFinVis" required></select>
                                                 <label>Mes</label>
-                                                <select class="form-select Mes" required></select>
+                                                <select class="form-select Mes" name="mesFinVis" required></select>
                                                 <label>Dia</label>
-                                                <select class="form-select Dia" required></select>
+                                                <select class="form-select Dia" name="diaFinVis" required></select>
                                             </div>
                                         </div>
 
@@ -425,20 +438,20 @@
 
                                             <div class="col-md-8">
                                                 <div class="form-check mb-2">
-                                                    <input class="form-check-input" type="checkbox" id="checkFacebook"
-                                                        value="facebook">
+                                                    <input class="form-check-input" name="redesSociales" type="checkbox"
+                                                        id="checkFacebook" value="facebook">
                                                     <label class="form-check-label" for="checkFacebook">Facebook</label>
                                                 </div>
 
                                                 <div class="form-check mb-2">
-                                                    <input class="form-check-input" type="checkbox" id="checkTwitter"
-                                                        value="twitter">
+                                                    <input class="form-check-input" name="redesSociales" type="checkbox"
+                                                        id="checkTwitter" value="twitter">
                                                     <label class="form-check-label" for="checkTwitter">Twitter</label>
                                                 </div>
 
                                                 <div class="form-check mb-2">
-                                                    <input class="form-check-input" type="checkbox" id="checkLinkedIn"
-                                                        value="linkedin">
+                                                    <input class="form-check-input" name="redesSociales" type="checkbox"
+                                                        id="checkLinkedIn" value="linkedin">
                                                     <label class="form-check-label" for="checkLinkedIn">LinkedIn</label>
                                                 </div>
                                             </div>
