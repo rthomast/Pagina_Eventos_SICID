@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const schemaUsuario = new mongoose.Schema({
+const schemaInscribirme = new mongoose.Schema({
     nombre: {
         type: String,
         required: true
@@ -39,5 +39,5 @@ const schemaUsuario = new mongoose.Schema({
     }
 });
 
-const Inscribirme = mongoose.model("Inscribirme", schemaUsuario);
+const Inscribirme = mongoose.model("Inscribirme", schemaInscribirme);
 module.exports = Inscribirme; 
