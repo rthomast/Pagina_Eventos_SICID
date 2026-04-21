@@ -43,17 +43,18 @@ body {
 
 .sideBar li{
     padding: 6px;  
+    
 }
 
 .sideBar a {
     color: var(--negro);
     padding-left: 3rem;
+    margin-right: -1rem;
 }
 
 .sideBar li:hover {
     background-color: #EBDEF0;
-    border-right: #8E44AD solid;
-    margin-right: -1rem;
+    border-right: #8E44AD solid;    
 }
 
 /* Migas de pan */
