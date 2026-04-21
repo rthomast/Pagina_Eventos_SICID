@@ -19,7 +19,7 @@ router.post("/", async (req, res) => {
         const usuarioGuardado = await nuevoUsuario.save();
         res.status(201).json(usuarioGuardado);
     } catch (error) {
-        // Manejo de errores (por ejemplo, si el correo ya existe o falla el enum)
+        // Manejo de errores
         res.status(400).json({ 
             mensaje: "Error al crear usuario", 
             detalle: error.message 
@@ -27,5 +27,4 @@ router.post("/", async (req, res) => {
     }
 });
 
-// ¡IMPORTANTE! Esto evita el error que tenías en index.js
 module.exports = router;
