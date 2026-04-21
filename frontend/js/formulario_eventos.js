@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const contenedor = document.getElementById("contenedorImagenes");
 
-    // 🔹 AGREGAR NUEVA FILA
+    // Otra fila
     contenedor.addEventListener("click", function (e) {
         if (e.target.classList.contains("btn-add")) {
 
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // 🔹 ELIMINAR FILA
+    // Eliminar fila
     contenedor.addEventListener("click", function (e) {
         if (e.target.classList.contains("btn-remove")) {
 
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // 🔹 VALIDAR ARCHIVOS
+    // Validar archivos
     contenedor.addEventListener("change", function (e) {
         if (e.target.classList.contains("input-imagen")) {
 
