@@ -25,7 +25,7 @@
 <body class="d-flex flex-column min-vh-100">
 
     <!-- Topbar -->
-    <div class="container-fluid topbar flex-shrink-0">
+    <section class="container-fluid topbar flex-shrink-0">
         <div class="row align-items-center">
 
             <!-- Logo -->
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!--Layout principal-->
     <header class="container-fluid">
@@ -143,7 +143,7 @@
         </div>
 
         <!-- Breadcumbs -->
-        <div class="container my-3">
+        <disectionv class="container my-3">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0">
 
@@ -168,254 +168,257 @@
                     </li>
                 </ol>
             </nav>
-        </div>
+            </section>
 
-        <!-- Publicacion evento -->
-        <div class="container">
+            <!-- Publicacion evento -->
+            <section class="container">
 
-            <div class="row col-12">
-                <img class="imgFormTop" src="./images/imgPublicacionTop@2x.png" alt="Imagen de personas en conferencia">
-            </div>
-
-            <article class="row d-flex flex-column g-0 bckGrdBlue">
-                <span class="col-auto fechaPub p-3">01 <br>AGO</span>
-                <span class="col-auto ps-4 pt-4">
-                    <h2><strong>Formulario de Inscripción:</strong> Publicación de Política Nacional de Discapacidad
-                        2020 - 2030</h2>
-                </span>
-            </article>
-        </div>
-
-        <div class="container my-5 paddingFomr">
-
-            <!-- TÍTULO -->
-            <h3 class="text-center fw-bold mb-4">
-                Información requerida para <br> Inscripción del Evento
-            </h3>
-
-            <!-- STEPS -->
-            <div class="text-center mb-4">
-                <span class="step active" id="step1">1</span>
-                <span class="step" id="step2">2</span>
-            </div>
-
-
-            <form id="formMultiStep">
-
-                <!-- Formulario parte 1 -->
-                <div class="step-content" id="content1">
-
-                    <div class="row g-3">
-                        <div class="col-md-4"><label>*Nombre Completo</label></div>
-                        <div class="col-md-8"><input type="text" class="form-control"
-                                placeholder="Introduzca el dato solicitado" required></div>
-
-                        <div class="col-md-4"><label>*Tipo de Identificación</label></div>
-                        <div class="col-md-8">
-                            <select class="form-select" required>
-                                <option value="">Seleccione el dato solicitado</option>
-                                <option>Cédula</option>
-                                <option>Pasaporte</option>
-                            </select>
-                        </div>
-
-                        <div class="col-md-4"><label>*Número de identificación</label></div>
-                        <div class="col-md-8"><input type="text" class="form-control"
-                                placeholder="Introduzca el dato solicitado" required></div>
-
-                        <!-- Dirección -->
-                        <div class="row mb-3 mt-4">
-                            <!-- Título Dirección -->
-                            <div class="col-md-4 mt-4">
-                                Dirección
-                            </div>
-
-                            <div class="col-md-8 separadorDireccion">
-
-                                <div class="row mb-2 align-items-center">
-                                    <div class="col-md-3"><label class="col-form-label">*Provincia</label></div>
-                                    <div class="col-md-9"><input type="text" class="form-control"
-                                            placeholder="Introduzca el dato solicitado" required></div>
-                                </div>
-
-                                <div class="row mb-2 align-items-center">
-                                    <div class="col-md-3"><label class="col-form-label">*Cantón</label></div>
-                                    <div class="col-md-9"><input type="text" class="form-control"
-                                            placeholder="Introduzca el dato solicitado" required></div>
-                                </div>
-
-                                <div class="row mb-2 align-items-center">
-                                    <div class="col-md-3"><label class="col-form-label">*Distrito</label></div>
-                                    <div class="col-md-9"><input type="text" class="form-control"
-                                            placeholder="Introduzca el dato solicitado" required></div>
-                                </div>
-
-                                <div class="row mb-2 align-items-center">
-                                    <div class="col-md-3"><label class="col-form-label">Otras señas</label></div>
-                                    <div class="col-md-9"><input type="text" class="form-control"
-                                            placeholder="Introduzca el dato solicitado"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4"><label>*Correo Electrónico</label></div>
-                        <div class="col-md-8"><input type="email" class="form-control"
-                                placeholder="Introduzca el dato solicitado" required></div>
-
-                        <div class="col-md-4"><label>*Teléfono</label></div>
-                        <div class="col-md-8"><input type="text" class="form-control"
-                                placeholder="Introduzca el dato solicitado" required></div>
-
-                        <div class="row mb-3 mt-4">
-                            <div class="col-md-4 mt-4">
-                                Profesión
-                            </div>
-
-                            <div class="col-md-8 separadorDireccion">
-
-                                <div class="row mb-2 align-items-center">
-                                    <div class="col-md-3"><label class="col-form-label">*Profesión</label></div>
-                                    <div class="col-md-9"><input type="text" class="form-control"
-                                            placeholder="Introduzca el dato solicitado" required></div>
-                                </div>
-
-                                <div class="row mb-2 align-items-center">
-                                    <div class="col-md-3">
-                                        <label class="col-form-label">
-                                            *Entidad para <br>la que trabaja
-                                        </label>
-                                    </div>
-                                    <div class="col-md-9"><input type="text" class="form-control"
-                                            placeholder="Introduzca el dato solicitado" required></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4"><label>*Tipo de deficiencia</label></div>
-                        <div class="col-md-8">
-                            <select class="form-select" required>
-                                <option value="">Seleccione el dato solicitado</option>
-                                <option>Fisica</option>
-                                <option>Visual</option>
-                                <option>Auditiva</option>
-                            </select>
-                        </div>
-
-                        <div class="col-md-4"><label>*¿Requiere transporte?</label></div>
-                        <div class="col-md-8">
-                            <input type="radio" name="transporte" required> Sí
-                            <input type="radio" name="transporte" required> No
-                        </div>
-                    </div>
-
-                    <div class="text-center mt-4">
-                        <button type="button" class="btn btn-primary" onclick="nextStep()">Siguiente →</button>
-                    </div>
+                <div class="row col-12">
+                    <img class="imgFormTop" src="./images/imgPublicacionTop@2x.png"
+                        alt="Imagen de personas en conferencia">
                 </div>
 
-                <!-- Formulario parte 2 -->
-                <div class="step-content d-none" id="content2">
+                <article class="row d-flex flex-column g-0 bckGrdBlue">
+                    <span class="col-auto fechaPub p-3">01 <br>AGO</span>
+                    <span class="col-auto ps-4 pt-4">
+                        <h2><strong>Formulario de Inscripción:</strong> Publicación de Política Nacional de Discapacidad
+                            2020 - 2030</h2>
+                    </span>
+                </article>
+            </section>
 
-                    <div class="row g-3">
+            <section class="container my-5 paddingFomr">
 
-                        <div class="col-md-4"><label>*Monto aproximado<br>del costo del transporte</label></div>
-                        <div class="col-md-8"><input type="text" class="form-control"
-                                placeholder="Introduzca el dato solicitado" required></div>
+                <!-- TÍTULO -->
+                <h3 class="text-center fw-bold mb-4">
+                    Información requerida para <br> Inscripción del Evento
+                </h3>
 
-                        <div class="col-md-4"><label>*Requiere hospedaje<br>para asistir al evento</label></div>
-                        <div class="col-md-8">
-                            <input type="radio" name="hospedaje" required> Sí
-                            <input type="radio" name="hospedaje" required> No
-                        </div>
+                <!-- STEPS -->
+                <div class="text-center mb-4">
+                    <span class="step active" id="step1">1</span>
+                    <span class="step" id="step2">2</span>
+                </div>
 
-                        <div class="col-md-4"><label>*Monto aproximado<br>del costo del hospedaje</label></div>
-                        <div class="col-md-8"><input type="text" class="form-control"
-                                placeholder="Introduzca el dato solicitado" required></div>
 
-                        <div class="col-md-4"><label>*Alergias a <br>medicamentos</label></div>
-                        <div class="col-md-8">
-                            <input type="radio" name="alergia" required> Sí
-                            <input type="radio" name="alergia" required> No
-                        </div>
+                <form id="formMultiStep">
 
-                        <div class="col-md-4"><label>*Describa a que medicamentos <br>o alimentos tiene alergias</label>
-                        </div>
-                        <div class="col-md-8"><input type="text" class="form-control"
-                                placeholder="Introduzca el dato solicitado" required></div>
+                    <!-- Formulario parte 1 -->
+                    <div class="step-content" id="content1">
 
-                        <div class="col-md-4"><label>*Requiere <br>interprete de señas</label></div>
-                        <div class="col-md-8">
-                            <input type="radio" name="interprete" required> Sí
-                            <input type="radio" name="interprete" required> No
-                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-4"><label>*Nombre Completo</label></div>
+                            <div class="col-md-8"><input type="text" class="form-control"
+                                    placeholder="Introduzca el dato solicitado" required></div>
 
-                        <div class="col-md-4"><label>*Mencione otros apoyos que <br>se deben de considerar para
-                                <br>asistir al evento</label></div>
-                        <div class="col-md-8"><input type="text" class="form-control"
-                                placeholder="Introduzca el dato solicitado"></div>
-
-                        <div class="row mb-3 mt-4">
-                            <div class="col-md-4 mt-4">
-                                Adjuntar documentos
+                            <div class="col-md-4"><label>*Tipo de Identificación</label></div>
+                            <div class="col-md-8">
+                                <select class="form-select" required>
+                                    <option value="">Seleccione el dato solicitado</option>
+                                    <option>Cédula</option>
+                                    <option>Pasaporte</option>
+                                </select>
                             </div>
 
-                            <div class="col-md-8 separadorDireccion">
+                            <div class="col-md-4"><label>*Número de identificación</label></div>
+                            <div class="col-md-8"><input type="text" class="form-control"
+                                    placeholder="Introduzca el dato solicitado" required></div>
 
-                                <div class="container my-4">
+                            <!-- Dirección -->
+                            <div class="row mb-3 mt-4">
+                                <!-- Título Dirección -->
+                                <div class="col-md-4 mt-4">
+                                    Dirección
+                                </div>
 
-                                    <div id="contenedorImagenes">
+                                <div class="col-md-8 separadorDireccion">
 
-                                        <div class="row align-items-center mb-3 item-imagen">
+                                    <div class="row mb-2 align-items-center">
+                                        <div class="col-md-3"><label class="col-form-label">*Provincia</label></div>
+                                        <div class="col-md-9"><input type="text" class="form-control"
+                                                placeholder="Introduzca el dato solicitado" required></div>
+                                    </div>
 
-                                            <!-- Adjuntar imagenes -->
-                                            <div class="col-md-3">
-                                                <label>Imágenes</label>
-                                            </div>
+                                    <div class="row mb-2 align-items-center">
+                                        <div class="col-md-3"><label class="col-form-label">*Cantón</label></div>
+                                        <div class="col-md-9"><input type="text" class="form-control"
+                                                placeholder="Introduzca el dato solicitado" required></div>
+                                    </div>
 
-                                            <div class="col-md-6">
-                                                <div class="input-group">
-                                                    <span class="input-group-text"><i
-                                                            class="fa-solid fa-paperclip"></i></span>
-                                                    <input type="file" class="form-control input-imagen"
-                                                        accept=".png,.jpg,.jpeg" required></input>
-                                                </div>
-                                                <small class="text-muted">máximo 10 MB por archivo</small>
-                                            </div>
+                                    <div class="row mb-2 align-items-center">
+                                        <div class="col-md-3"><label class="col-form-label">*Distrito</label></div>
+                                        <div class="col-md-9"><input type="text" class="form-control"
+                                                placeholder="Introduzca el dato solicitado" required></div>
+                                    </div>
 
-                                            <!-- Botones -->
-                                            <div class="col-md-3 d-flex gap-2">
-                                                <button type="button" class="btn btn-primary btn-add">+</button>
-                                                <button type="button" class="btn btn-secondary btn-remove">-</button>
-                                            </div>
-
-                                            <!-- Descripción -->
-                                            <div class="col-md-3 mt-2">
-                                                <label>Descripción de imagen</label>
-                                            </div>
-                                            <div class="col-md-6 mt-2">
-                                                <input type="text" class="form-control"
-                                                    placeholder="Introduzca el dato solicitado" required>
-                                            </div>
-                                        </div>
+                                    <div class="row mb-2 align-items-center">
+                                        <div class="col-md-3"><label class="col-form-label">Otras señas</label></div>
+                                        <div class="col-md-9"><input type="text" class="form-control"
+                                                placeholder="Introduzca el dato solicitado"></div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-12 mt-3">
-                                <input type="checkbox" required> Autorizo notificaciones de este evento por medio de
-                                correo
-                                electrónico y teléfono
+                            <div class="col-md-4"><label>*Correo Electrónico</label></div>
+                            <div class="col-md-8"><input type="email" class="form-control"
+                                    placeholder="Introduzca el dato solicitado" required></div>
+
+                            <div class="col-md-4"><label>*Teléfono</label></div>
+                            <div class="col-md-8"><input type="text" class="form-control"
+                                    placeholder="Introduzca el dato solicitado" required></div>
+
+                            <div class="row mb-3 mt-4">
+                                <div class="col-md-4 mt-4">
+                                    Profesión
+                                </div>
+
+                                <div class="col-md-8 separadorDireccion">
+
+                                    <div class="row mb-2 align-items-center">
+                                        <div class="col-md-3"><label class="col-form-label">*Profesión</label></div>
+                                        <div class="col-md-9"><input type="text" class="form-control"
+                                                placeholder="Introduzca el dato solicitado" required></div>
+                                    </div>
+
+                                    <div class="row mb-2 align-items-center">
+                                        <div class="col-md-3">
+                                            <label class="col-form-label">
+                                                *Entidad para <br>la que trabaja
+                                            </label>
+                                        </div>
+                                        <div class="col-md-9"><input type="text" class="form-control"
+                                                placeholder="Introduzca el dato solicitado" required></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4"><label>*Tipo de deficiencia</label></div>
+                            <div class="col-md-8">
+                                <select class="form-select" required>
+                                    <option value="">Seleccione el dato solicitado</option>
+                                    <option>Fisica</option>
+                                    <option>Visual</option>
+                                    <option>Auditiva</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-4"><label>*¿Requiere transporte?</label></div>
+                            <div class="col-md-8">
+                                <input type="radio" name="transporte" required> Sí
+                                <input type="radio" name="transporte" required> No
                             </div>
                         </div>
 
                         <div class="text-center mt-4">
-                            <button type="button" class="btn btn-secondary" onclick="prevStep()">← Anterior</button>
-                            <button type="submit" class="btn btn-primary">Enviar ✔</button>
+                            <button type="button" class="btn btn-primary" onclick="nextStep()">Siguiente →</button>
                         </div>
                     </div>
-            </form>
 
-        </div>
+                    <!-- Formulario parte 2 -->
+                    <div class="step-content d-none" id="content2">
+
+                        <div class="row g-3">
+
+                            <div class="col-md-4"><label>*Monto aproximado<br>del costo del transporte</label></div>
+                            <div class="col-md-8"><input type="text" class="form-control"
+                                    placeholder="Introduzca el dato solicitado" required></div>
+
+                            <div class="col-md-4"><label>*Requiere hospedaje<br>para asistir al evento</label></div>
+                            <div class="col-md-8">
+                                <input type="radio" name="hospedaje" required> Sí
+                                <input type="radio" name="hospedaje" required> No
+                            </div>
+
+                            <div class="col-md-4"><label>*Monto aproximado<br>del costo del hospedaje</label></div>
+                            <div class="col-md-8"><input type="text" class="form-control"
+                                    placeholder="Introduzca el dato solicitado" required></div>
+
+                            <div class="col-md-4"><label>*Alergias a <br>medicamentos</label></div>
+                            <div class="col-md-8">
+                                <input type="radio" name="alergia" required> Sí
+                                <input type="radio" name="alergia" required> No
+                            </div>
+
+                            <div class="col-md-4"><label>*Describa a que medicamentos <br>o alimentos tiene
+                                    alergias</label>
+                            </div>
+                            <div class="col-md-8"><input type="text" class="form-control"
+                                    placeholder="Introduzca el dato solicitado" required></div>
+
+                            <div class="col-md-4"><label>*Requiere <br>interprete de señas</label></div>
+                            <div class="col-md-8">
+                                <input type="radio" name="interprete" required> Sí
+                                <input type="radio" name="interprete" required> No
+                            </div>
+
+                            <div class="col-md-4"><label>*Mencione otros apoyos que <br>se deben de considerar para
+                                    <br>asistir al evento</label></div>
+                            <div class="col-md-8"><input type="text" class="form-control"
+                                    placeholder="Introduzca el dato solicitado"></div>
+
+                            <div class="row mb-3 mt-4">
+                                <div class="col-md-4 mt-4">
+                                    Adjuntar documentos
+                                </div>
+
+                                <div class="col-md-8 separadorDireccion">
+
+                                    <div class="container my-4">
+
+                                        <div id="contenedorImagenes">
+
+                                            <div class="row align-items-center mb-3 item-imagen">
+
+                                                <!-- Adjuntar imagenes -->
+                                                <div class="col-md-3">
+                                                    <label>Imágenes</label>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div class="input-group">
+                                                        <span class="input-group-text"><i
+                                                                class="fa-solid fa-paperclip"></i></span>
+                                                        <input type="file" class="form-control input-imagen"
+                                                            accept=".png,.jpg,.jpeg" required></input>
+                                                    </div>
+                                                    <small class="text-muted">máximo 10 MB por archivo</small>
+                                                </div>
+
+                                                <!-- Botones -->
+                                                <div class="col-md-3 d-flex gap-2">
+                                                    <button type="button" class="btn btn-primary btn-add">+</button>
+                                                    <button type="button"
+                                                        class="btn btn-secondary btn-remove">-</button>
+                                                </div>
+
+                                                <!-- Descripción -->
+                                                <div class="col-md-3 mt-2">
+                                                    <label>Descripción de imagen</label>
+                                                </div>
+                                                <div class="col-md-6 mt-2">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Introduzca el dato solicitado" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 mt-3">
+                                    <input type="checkbox" required> Autorizo notificaciones de este evento por medio de
+                                    correo
+                                    electrónico y teléfono
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <button type="button" class="btn btn-secondary" onclick="prevStep()">← Anterior</button>
+                                <button type="submit" class="btn btn-primary">Enviar ✔</button>
+                            </div>
+                        </div>
+                </form>
+
+            </section>
 
     </main>
 
